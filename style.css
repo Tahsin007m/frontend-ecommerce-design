@@ -8,12 +8,12 @@ body{
    font-weight: 300;
    font-style: normal
 }
-
 .navbar{
     display: flex;
     align-items: center;
     padding: 20px;
 }
+
 nav{
     flex: 1;
     text-align: right;
@@ -33,22 +33,26 @@ a{
 p{
    color: #555;
 }
+
 .container{
     max-width: 1300px;
     margin: auto;
     padding-left: 25px;
     padding-right: 25px;
 }
+
 .row{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
 .col-2{
     flex-basis: 50%;
     min-width: 300px;
 }
+
 .col-2 img{
     max-width: 100%;
     padding: 50px 0;
@@ -76,6 +80,7 @@ p{
 .btn:hover{
     background: #563434;
 }
+
 .categories{
     margin: 70px 0;
 }
@@ -84,9 +89,11 @@ p{
     min-width: 250px;
     margin-bottom: 30px;
 }
+
 .col-3 img{
     width: 100%;
 }
+
 .small-container{
     max-width: 1080px;
     margin: auto;
@@ -100,9 +107,11 @@ p{
     margin-bottom: 50px;
     transition: transform 0.5s;
 }
+
 .col-4 img{
     width: 100%;
 }
+
 .title{
     text-align: center;
     margin: 0 auto 80px;
@@ -110,6 +119,7 @@ p{
     line-height: 60px;
     color: #555;
 }
+
 .title::after{
     content: ' ';
     background: #ff523b;
@@ -121,13 +131,16 @@ p{
     left: 50%;
     transform: translateX(-50%);
 }
+
 h4{
     color: #555;
     font-weight: normal;
 }
+
 .col-4 p{
    font-size: 14px;
 }
+
 .rating .fa{
     color: #ff523b;
 }
@@ -135,7 +148,7 @@ h4{
     transform: translateY(-5px);
 }
 
-/*-------  OFFER --------*/
+/*----  offer -----*/
 
 .offer{
     background: radial-gradient(#fff, #ffd6d6);
@@ -149,7 +162,7 @@ small{
     color: #555;
 }
 
-/*------ TESTIMONIAL  ------*/
+/* testimonial  */
 
 .testimonial{
     padding-top: 100px;
@@ -184,8 +197,7 @@ small{
     font-size: 16px;
 }
 
-/*------     BRANDS    ------*/
-
+/* brands */
 .brands{
     margin: 100px auto;
 }
@@ -196,12 +208,14 @@ small{
     width: 100%;
     cursor: pointer;
     filter: grayscale(100%);
+
 }
+
 .col-5 img:hover{
     filter: grayscale(0);
 }
 
-/*------    FOOTER    --------*/
+/*    footer    */
 
 .footer{
     background: #000;
@@ -209,6 +223,7 @@ small{
     font-size: 14px;
     padding: 16px 0 20px;
 }
+
 .footer p{
     color: #8a8a8a;
 }
@@ -242,6 +257,7 @@ small{
 .applogo img{
     width: 140px;
 }
+
 .footer hr{
     border: none;
     background: #b5b5b5;
@@ -250,4 +266,51 @@ small{
 }
 .cp{
     text-align: center;
+}
+
+/*       FOR RESPONSIVE       */
+
+.menu-icon{
+    width: 28px;
+    margin-left: 25px;
+    display: none;
+}
+
+/*------------ media query for menu   ---------*/
+
+@media only screen and (max-width: 800px){
+    nav ul{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: #333;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin-right: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    nav ul li a{
+        color: #fff;
+    }
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+    }
+}
+
+/*------------ media query for less than 600px menu   ---------*/
+
+@media only screen and (max-width: 600px){
+    
+    .row{
+        text-align: center;
+    }
+    .col-2, .col-3, .col-4{
+        flex-basis: 100%;
+    }
 }
